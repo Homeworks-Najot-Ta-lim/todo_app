@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  </head>
+  <body class="w-[100vw] h-[100vh] grid place-items-center">
+    <div class="container shadow grid place-items-center w-[90%] md:w-[80%] lg:w-[60%] p-3">
+      <h1 class="p-4 text-3xl font-semibold">Ishlar ro'yxati</h1>
+      <div class="input-button grid grid-cols-5 w-[90%] gap-2">
+        <input
+          type="text"
+          class="col-span-4 p-2 border border-solid border-black rounded-[15px]"
+          placeholder="Yangi ish qo'sish..."
+        />
+        <button
+          class="col-span-1 p-2 border border-solid border-black rounded-[15px] bg-green-600 text-white text-xl"
+        >
+          Qo'shish
+        </button>
+      </div>
+      <div class="sort-options w-[90%] p-2 flex justify-between">
+        <div>
+          <label for="sortTasks" class="mr-2 text-lg">Saralash: </label>
+          <select id="sortTasks" class="p-2 border border-black rounded-md">
+            <option value="asc">Eskilari ustun</option>
+            <option value="desc">Yangililari ustun</option>
+          </select>
+        </div>
+        <button
+          id="deleteCompletedButton"
+          class="p-2 border border-solid border-black rounded-[15px] bg-red-600 text-white text-xl"
+        >
+          Barcha bajarilganlarni o'chirish
+        </button>
+      </div>
+      
+      <ul class="grid w-[90%] place-items-center p-3"></ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
